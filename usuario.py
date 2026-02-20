@@ -1,25 +1,41 @@
-class usuario:
-    def __init__(self):
-        self.nombre=""
-        self.apellido=""
-        self.cedula=""
+class Usuario:
+    
+    def __init__(self,nombre,cedula,rango):
+        self.cedula = cedula
+        self.nombre = nombre
+        self.rango = rango
+        
+    def get_cedula(self):
+        return self.cedula
+    
+    def  set_dato_cedula (self,dato_cedula):
+        self.cedula = dato_cedula
         
     def get_nombre(self):
         return self.nombre
     
-    def set_capturar_nombre(self,nuevo_nombre):
-        nuevo_nombre=input ("ingrese tu nombre: ")
-        self.nombre=nuevo_nombre
+    def set_dato_nombre (self,dato_nombre):
+        self.nombre = dato_nombre
         
-    def get_apellido(self):
-        return self.apellido
-    def set_apellido(self,nuevo_apellido):
-        nuevo_apellido=input ("digite su apellido: ")
-        self.apellido=nuevo_apellido
+    def get_rango (self):
+        return self.rango
+    
+    
+    def set_dato_rango (self,dato_rango):
+        self.rango = dato_rango
         
-    def get_cedula(Self):
-        return Self.cedula
-    def set_cedula(self,nueva_cedula):
-        nueva_cedula=int (input("Digite tu documento"))
-        self.cedula=nueva_cedula
+        
+    def imprimir_datos (self):
+        print (f"cedula:{self.cedula}")
+        print (f"nombre:{self.nombre}")
+        print (f"rango:{self.rango}")
+        
+               
+        
+        
+        
+        
+   
+        
+        
         

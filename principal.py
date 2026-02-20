@@ -1,31 +1,26 @@
-from usuario import usuario
-from calculadora import calculadora
-from numeros import numeros 
+from usuario import Usuario
+from carro import Carro
+from paqueadero import parqueadero
 
-usuario1 = usuario("Mateo", "12345")
-numero1 = numeros(5)
-numero2 = numeros(10)
+print (" PARQUEADERO ")
+ 
+cedula = input ("ingrese su numero de cedula: ")
+nombre = input ("ingrese nombre :")
+rango = input ("ingrese su rango :(admin/cliente):")
+Usuario = Usuario (cedula,nombre,rango)
+
+placa = input ("ingrese la placa del carro:")
+color = input ("ingrese el color del carro:")
+marca = input ("ingrese marca del carro: ")
+carro = Carro (placa,color,marca)
+
+parqueadero = parqueadero (Usuario, carro)
+parqueadero.registrar_entrada ("","")
 
 
-calculadora1 = calculadora (numero1,numero2)
-
-
-suma = calculadora1.resultado_suma
-resta=calculadora1.resultado_resta
-multiplicacion=calculadora1.resultado_multiplicacion
-division=calculadora1.resultado_division
-
-fecha_actual=calculadora1.get_fecha()
-fecha_cambiada=calculadora1.set_fecha("2026-18-02")
-
-#mostrar resultados
-print(usuario1.mostrar_info())
-print(calculadora1.mostrar_info())
-print(numero1.mostrar_info())
-print(numero2.mostrar_info())
-print(f"suma:{suma}")
-print(f"resta:{resta}")
-print(f"multiplicacion:{multiplicacion}")
-print(f"division:{division}")
-print(f"fecha de la calculadora (antes):{fecha_actual}")
-print(f"fecha de la calculadora (despues):{fecha_cambiada}")
+opcion = input ("¿desea registrar la salida? (si/no): ")
+if opcion == "si":
+    parqueadero.registrar_salida()
+    parqueadero.mostrar_informacion
+    
+    
