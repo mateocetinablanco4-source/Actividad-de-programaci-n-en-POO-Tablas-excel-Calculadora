@@ -25,11 +25,7 @@ class Usuario:
         self.rango = dato_rango
         
         
-    def imprimir_datos (self):
-        print (f"cedula:{self.cedula}")
-        print (f"nombre:{self.nombre}")
-        print (f"rango:{self.rango}")
-        
+
                
         
         
